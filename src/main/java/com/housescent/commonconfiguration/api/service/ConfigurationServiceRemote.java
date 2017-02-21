@@ -1,6 +1,5 @@
 package com.housescent.commonconfiguration.api.service;
 
-import com.housescent.commonconfiguration.api.exception.DuplicateSettingException;
 import com.housescent.commonconfiguration.api.exception.SettingNotFoundException;
 
 import java.util.Map;
@@ -23,7 +22,7 @@ public interface ConfigurationServiceRemote {
      * @return the value for a single property for the specified <code>applicationName</code> and
      * <code>key</code>.
      */
-    String getPropertyValue(String applicationName, String key) throws DuplicateSettingException, SettingNotFoundException;
+    String getPropertyValue(String applicationName, String key) throws SettingNotFoundException;
 
     /**
      * Retrieves a list of common for a particular application as <code>Map</code>
@@ -31,5 +30,5 @@ public interface ConfigurationServiceRemote {
      * @param applicationName the application chosen name, under which the setting is stored.
      * @return a map of setting key-value pairs for the specified <code>applicationName</code>.
      */
-    Map<String, String> getPropertiesForApplicationAsMap(String applicationName) throws DuplicateSettingException, SettingNotFoundException;
+    Map<String, String> getPropertiesForApplicationAsMap(String applicationName) throws SettingNotFoundException;
 }
