@@ -1,7 +1,7 @@
 package com.housescent.commonconfiguration.api.exception;
 
 /**
- * Created by F4902718 - Siya Sosibo on 20-May-16 16:16.
+ * Created by Siya Sosibo on 20-May-16 16:16.
  */
 public class DuplicateSettingException extends SettingsException {
     public DuplicateSettingException() {
